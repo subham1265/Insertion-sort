@@ -1,0 +1,28 @@
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    int z;
+    cin>>z;
+    
+    int a[z];
+    for(int i=0;i<z;i++){
+        cin>>a[i];
+    }
+    
+    for(int i=1;i<z;i++){
+        int key=a[i];
+        int j=i-1;
+        
+        while(j>=0 && a[j]>key){
+            a[j+1]=a[j];
+            j--;
+        }
+        a[j+1]=key;
+    }
+     for(int i=0;i<z;i++){
+         cout<<a[i]<<" ";
+     }
+    
+        
+    return 0;
+}
